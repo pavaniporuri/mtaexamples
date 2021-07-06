@@ -1,0 +1,25 @@
+ID: Z_MTA_XSJS_DEMO
+_schema-version: '2.1'
+version: 0.0.1
+
+modules:
+ - name: hanamodule
+   type: hdb
+   path: hanamodule
+   requires:
+    - name: hdi_hanamodule
+
+
+ - name: nodemodule
+   type: nodejs
+   path: nodemodule
+   provides:
+    - name: nodemodule_api
+      properties:
+         url: ${default-url}
+
+resources:
+ - name: hdi_hanamodule
+   properties:
+      hdi-container-name: ${service-name}
+   type: com.sap.xs.hdi-container

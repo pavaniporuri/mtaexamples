@@ -1,0 +1,5 @@
+column table "Z_MTA_XSJS_DEMO.hanamodule.Tables::EmpSequence"
+(
+EMPID integer,
+EMPNAME VARCHAR(50)
+)
